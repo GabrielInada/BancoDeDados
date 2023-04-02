@@ -4,10 +4,10 @@ create database aula_bd;
 
 -- criando a primeira tabela do banco de dados
 create table aluno (
-id int,
-nome varchar(50),
-email varchar(150),
-celular varchar(11)
+	id int,
+	nome varchar(50),
+	email varchar(150),
+	celular varchar(11)
 );
 
 
@@ -40,11 +40,12 @@ alter table aluno modify id int primary key;
 -- criando a tabela com constraints
 -- drop table aluno;
 create table aluno (
-id int primary key,
-nome varchar(50) not null,
-email varchar(150) unique not null,
-celular varchar(11),
-nascimento date not null ) ;
+	id int primary key,
+	nome varchar(50) not null,
+	email varchar(150) unique not null,
+	celular varchar(11),
+	nascimento date not null 
+) ;
 
 
 -- alterando a tabela aluno para acrecentar o campo mae após nome
@@ -55,7 +56,7 @@ alter table aluno add mae varchar(100) not null after nome;
 alter table aluno drop column mae;
 
 
--- alterando a tabela aluno para renomear o campo nascimentoALTER TABLE 
+-- alterando a tabela aluno para renomear o campo nascimento ALTER TABLE 
 alter table aluno change column nascimento data_nascimento date not null;
 
 
