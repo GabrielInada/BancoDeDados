@@ -15,7 +15,9 @@ insert into cidade (nome, populacao, area, estado) values
     ('Porto Velho', 548000, 34000, 4),
     ('Manaus', 2200000, 11400, 5),
     ('São Paulo', 12400000, 1500, 6);
-    
+
+-- inserindo alguns alunos
+insert into aluno (nome, email, celular, nascimento, cidade)  values ('Alex', 'alex@ufra.edu.br', '91988991122', '1999-10-01', null);
 insert into aluno (nome, email, celular, nascimento, cidade)  values
     ('Fábio', 'fabio@ufra.edu.br', '91999991111', '2000-01-01', null),
     ('Fulano', 'fulano@ufra.edu.br', '91999992222', '2001-01-01', 1),
