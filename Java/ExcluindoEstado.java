@@ -2,7 +2,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class Atualizando {
+public class ExcluindoEstado {
 
     public static void main(String[] args) {
         try {
@@ -12,11 +12,9 @@ public class Atualizando {
 
             Connection mydb = DriverManager.getConnection(url, "root", "root");
             
-            String sql = "update estado set nome = ?, sigla = ? where id = ?";
+            String sql = "delete from estado where id = ?";
             PreparedStatement ps = mydb.prepareStatement(sql);
-            ps.setString(1, "Mato Grosso");
-            ps.setString(2, "MT");
-            ps.setInt(3, 6);
+            ps.setInt(1, 6);
             int registros = ps.executeUpdate();
             System.out.println("Registros afetados: " + registros);
         } catch (Exception e) {
