@@ -28,6 +28,15 @@ public class ConsoleEstadoCRUD {
         }
     }
 
+    public void desconectar() {
+        try {
+            System.out.println("Desconectando do banco de dados aula_bd ...");
+            this.mydb.close();
+        } catch (Exception e) {
+            System.out.println("Erro: " + e);
+        }
+    }
+
     public boolean create(String nome, String sigla) {
         System.out.printf("Inserindo o estado %s %s\n", nome, sigla);
         try {
@@ -170,11 +179,12 @@ public class ConsoleEstadoCRUD {
             int id = 0;
             String nome = null;
             String sigla = null;
+            String opcao = null;
             Scanner terminal = new Scanner(System.in);
             while (!encerrar) {
                 crud.menu();
-                String linha = terminal.nextLine();
-                switch (linha.trim()) {
+                opcao = terminal.nextLine();
+                switch (opcao.trim()) {
                     case "1":
                         crud.restore();
                         break;
@@ -232,6 +242,7 @@ public class ConsoleEstadoCRUD {
                         break;
                     default:
                         System.out.println("Encerrando o programa ...");
+                        crud.desconectar();
                         encerrar = true;
                         codigo = 0;
                 }
