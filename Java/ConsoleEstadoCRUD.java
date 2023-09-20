@@ -14,9 +14,9 @@ public class ConsoleEstadoCRUD {
     }
 
     public boolean conectar() {
+        System.out.println("Conectando com o MySQL ...");
+        System.out.println("Banco de Dados aula_bd");
         try {
-            System.out.println("Conectando com o MySQL ...");
-            System.out.println("Banco de Dados aula_bd");
 
             Class.forName(this.DRIVER);
 
@@ -29,8 +29,8 @@ public class ConsoleEstadoCRUD {
     }
 
     public void desconectar() {
+        System.out.println("Desconectando do banco de dados aula_bd ...");
         try {
-            System.out.println("Desconectando do banco de dados aula_bd ...");
             this.mydb.close();
         } catch (Exception e) {
             System.out.println("Erro: " + e);
@@ -157,8 +157,7 @@ public class ConsoleEstadoCRUD {
     }
 
     public void menu() {
-        System.out.println("Digite o número de uma das operações");
-        System.out.println();
+        System.out.println("Digite o número de uma das operações\n");
         System.out.println("1 - listar todos");
         System.out.println("2 - listar pelo id");
         System.out.println("3 - listar pelo nome");
@@ -166,8 +165,7 @@ public class ConsoleEstadoCRUD {
         System.out.println("5 - incluir sem id");
         System.out.println("6 - atualizar");
         System.out.println("7 - excluir");
-        System.out.println("encerrar o programa com qualquer outro valor");
-        System.out.println();
+        System.out.println("encerrar o programa com qualquer outro valor\n");
         System.out.print("> ");
     }
 
