@@ -13,6 +13,7 @@ create table aluno (
 
 -- operações CRUD na tabela aluno
 insert into aluno values (1, ‘Fulano’, ‘fulano@email.com’, ‘91988774433’);
+insert into aluno values (2, ‘Ciclano’, ‘ciclano@email.com’, ‘91988773344’);
 
 select * from aluno;
 
@@ -23,7 +24,7 @@ delete from aluno where id = 1;
 select nome, email from aluno;
 
 
--- alterando a tabela aluno para acrecentar campo nascimento
+-- alterando a tabela aluno para acrescentar campo nascimento
 alter table aluno add nascimento date;
 
 
@@ -37,8 +38,8 @@ alter table aluno modify email varchar(150) unique not null;
 alter table aluno modify id int primary key;
 
 
--- criando a tabela com constraints
--- drop table aluno;
+-- criando a tabela com os constraints
+drop table aluno; -- excluindo a tabela aluno antes de criá-la novamente
 create table aluno (
 	id int primary key,
 	nome varchar(50) not null,
@@ -60,7 +61,7 @@ alter table aluno drop column mae;
 alter table aluno change column nascimento data_nascimento date not null;
 
 
--- criando as tabelas cidade e estado
+-- criando as tabelas cidade e estado sem os relacionamentos
 create table cidade (
 	id int primary key,
 	nome varchar(50) not null,
