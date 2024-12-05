@@ -27,3 +27,7 @@ Em ambos os casos é necessário configurar o driver MySQL.
 Utilize o gerenciador de pacotes PIP e execute o comando abaixo no terminal:
 
 `pip install mysql-connector-python`
+
+# Exemplo lúdico com arquivos
+
+Como seria manipular um simples lista de contatos, sem o uso de um sistema gerenciador de banco de dados?  
