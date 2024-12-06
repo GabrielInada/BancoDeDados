@@ -10,10 +10,10 @@ banco = "aula_bd"
 
 try:
     mydb = mysql.connector.connect(
-    host=host,
-    user=usuario,
-    password=senha,
-    database=banco
+        host=host,
+        user=usuario,
+        password=senha,
+        database=banco
     )
     print("Conectado?", mydb.is_connected())    
 except BaseException as e:

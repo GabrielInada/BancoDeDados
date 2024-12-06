@@ -5,10 +5,10 @@ print('Banco de Dados aula_bd')
 
 try:
     mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="aula_bd"
+        host="localhost",
+        user="root",
+        password="root",
+        database="aula_bd"
     )
     
     sql = "select id, nome, sigla from estado"
